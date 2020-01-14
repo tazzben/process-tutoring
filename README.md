@@ -23,6 +23,10 @@ The program is driven by a service account file (service-account.json) -- you ca
 
 The settings.json file indicates the default target spreadsheet, the data range, cancel range, id range, and if there is a custom spreadsheet for some users.  The file is relatively self explanatory. 
 
+## Creating a Google Cloud Function
+
+You can create a Google Cloud Function by following the steps outlined in this [guide](https://cloud.google.com/functions/docs/quickstart-console): uploading all necessary code as a zip file.  This includes the service account JSON file. 
+
 ## Setting Up the Webhook
 
 To setup the webhook, you need to tell Calendly where to send events.  You can do this by executing a single line from the terminal.

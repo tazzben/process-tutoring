@@ -17,7 +17,7 @@ This program was designed to track tutoring appointments in the College of Busin
     
 The last three columns come from questions added to the Calendly event questioner.  If these questions are not added, these fields will be left blank.
 
-The program is driven by a service account file (service-account.json) -- you can obtain a service account JSON file by following the instructions (here)[https://cloud.google.com/iam/docs/creating-managing-service-account-keys].  You need to add this service account as an editor to the target spreadsheet. 
+The program is driven by a service account file (service-account.json) -- you can obtain a service account JSON file by following the instructions [here](https://cloud.google.com/iam/docs/creating-managing-service-account-keys).  You need to add this service account as an editor to the target spreadsheet. 
 
 ## The Setting File
 

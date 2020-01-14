@@ -1,0 +1,13 @@
+{
+    "spreadsheet": "1M4cE4dwqjGBEHijg6tkbGi6BU5qbV7vsRIhV1qZ6S3M",
+    "range": "Data",
+    "event_types": ["event_type_name","15min","30-minute-meeting","15-minute-zoom-meeting","30-minute-zoom-meeting","30min","60min","15min-zoom-meeting","30min-zoom-meeting","60min-zoom-meeting"],
+    "idrange": "Data!I:I",
+    "cancelCol": "Data!H",
+    "custom": [
+        {
+            "name": "Ben O. Smith",
+            "spreadsheet": "1NPE8hZVuF2DMfo3OlWOgPjKco5DzLHhbSGFa-dGZSbk"
+        }
+    ]
+}

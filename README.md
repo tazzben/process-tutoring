@@ -41,3 +41,7 @@ https://calendly.com/api/v1/hooks
 ```
 
 Where the token is your Calendly token and the cloud function URL is the URL provided by your new Cloud function.
+
+## Getting Help
+
+If you encounter any issues setting up this program, please contact Ben Smith at bosmith@unomaha.edu.

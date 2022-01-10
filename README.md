@@ -21,7 +21,7 @@ The program is driven by a service account file (service-account.json) -- you ca
 
 ## The Setting File
 
-The settings.json file indicates the default target spreadsheet, the data range, cancel range, id range, and if there is a custom spreadsheet for some users.  The file is relatively self explanatory. 
+The settings.json file indicates the Calendly token, the default target spreadsheet, the data range, cancel range, id range, and if there is a custom spreadsheet for some users.  The file is relatively self explanatory.
 
 ## Creating a Google Cloud Function
 
@@ -32,15 +32,23 @@ You can create a Google Cloud Function by following the steps outlined in this [
 To setup the webhook, you need to tell Calendly where to send events.  You can do this by executing a single line from the terminal.
 
 ```bash
-curl \
---header "X-TOKEN: <your_token>" \
---data "url=https://<Cloud Function URL>" \
---data "events[]=invitee.created" \
---data "events[]=invitee.canceled" \
-https://calendly.com/api/v1/hooks
+curl --request POST \
+  --url https://api.calendly.com/webhook_subscriptions \
+  --header 'Authorization: Bearer <Calendly Token>' \
+  --header 'Content-Type: application/json' \
+  --data '{
+  "url": "https://<Cloud Function URL>",
+  "events": [
+    "invitee.created",
+    "invitee.canceled"
+  ],
+  "organization": "<organization URI>",
+  "user": "<user URI>",
+  "scope": "organization"
+}'
 ```
 
-Where the token is your Calendly token and the cloud function URL is the URL provided by your new Cloud function.
+Where the token is your Calendly token and the cloud function URL is the URL provided by your new Cloud function.  The organization and user URIs are Calendly's unique identifiers for your user account or organization.  You can set the scope to "user" or "organization" depending on if you want to collect tutoring information just for yourself or all users in your organization.
 
 ## Getting Help
 

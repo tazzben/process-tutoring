@@ -48,7 +48,7 @@ curl --request POST \
 }'
 ```
 
-Where the token is your Calendly token and the cloud function URL is the URL provided by your new Cloud function.  The organization and user URIs are Calendly's unique identifiers for your user account or organization.  You can set the scope to "user" or "organization" depending on if you want to collect tutoring information just for yourself or all users in your organization.
+Where the token is your Calendly token and the cloud function URL is the URL provided by your new Cloud function.  The organization and user URIs are Calendly's unique identifiers for your user account or organization.  You can set the scope to "user" or "organization" depending on if you want to collect tutoring information just for yourself or all users in your organization.  Your Calendly account must be an admin user to use the organization scope.
 
 ## Getting Help
 
